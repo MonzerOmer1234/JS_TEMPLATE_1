@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Tahoma", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header .nav {
+  display: flex;
+}
+.header ul li {
+  padding: 10px;
+
+  height: 40px;
+}
+.header ul li a {
+  text-decoration: none;
+  color: white;
+}
+.header > i {
+  margin-right: 170px;
+}
+.header ul li:hover {
+  background-color: #aaa;
+  height: 40px;
+}
+.landing {
+  background-image: url(../images/la.jpg);
+  background-size: contain;
+  animation: change-landing 15s infinite;
+  height: calc(100vh + 80px);
+  position: relative;
+  z-index: -1;
+  background-repeat: no-repeat;
+  width: 100vw;
+  top: 33px;
+  left: -10px;
+}
+.drop-menu {
+  background-color: white;
+  color: black;
+  position: relative;
+  top: 11px;
+  display: none;
+}
+.drop-menu li {
+  width: 100%;
+}
+.more:hover .drop-menu {
+  display: block;
+}
+/* Start Band Section */
+.band {
+  margin: 200px auto;
+  position: relative;
+  top: -130px;
+}
+.band h2 {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 40px;
+  text-align: center;
+}
+.band span {
+  margin: auto;
+  display: block;
+  width: 300px;
+  font-style: italic;
+  color: #7777778c;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+.band p {
+  width: 100%;
+  line-height: 1.6;
+  padding: 20px;
+}
+.band .name {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  width: 100vw;
+}
+
+.band .name div img {
+  width: 300px;
+  height: 300px;
+}
+@media (max-width: 767px) {
+  .landing {
+    width: 1073px;
+  }
+  .band {
+    margin: -140px 50px;
+  }
+  .band h2 {
+    margin: auto;
+  }
+  .band .name {
+    margin: auto;
+  }
+}
+.tour {
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 726px;
+  padding: 10px 0;
+  margin: 100px 0;
+  width: calc(100% + 100px);
+  margin-left: -27px;
+}
+@media (max-width: 767px) {
+  .tour {
+    width: 1035px;
+  }
+}
+.tour .remember {
+  color: #777;
+  font-style: italic;
+}
+.months {
+  height: 150px;
+  margin: 20px;
+  background-color: white;
+  color: black;
+  height: auto;
+}
+.months div {
+  text-align: left;
+  height: 41px;
+  line-height: 41px;
+  padding-left: 10px;
+}
+.months div:not(:last-child) {
+  border-bottom: 1px solid #7777774a;
+}
+.months div > span:first-child {
+  color: #777;
+}
+.months div:not(:last-child) > span:nth-child(2) {
+  background-color: #e64a19;
+  color: white;
+  display: inline-block;
+  height: 33px;
+  margin-top: 3px;
+  padding: 5px;
+  text-align: center;
+  line-height: 33px;
+  margin-left: 25px;
+}
+.november {
+  display: flex;
+  justify-content: space-between;
+}
+.months div:last-child > span:nth-child(2) {
+  margin-right: 90px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+  top: 5px;
+}
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 45px;
+}
+@media (max-width:991px){
+  .countries{
+    gap: 20px;
+  }
+}
+@media (min-width:1200px){
+  .countries{
+    gap: 150px;
+  }
+}
+
+.countries > div {
+  width: 230px;
+  background-color: white;
+  margin-left: 50px;
+  height: 450px;
+}
+.countries > div > img {
+  width: 230px;
+  height: 50%;
+}
+.countries div span:nth-child(2) {
+  color: black;
+  display: block;
+  margin-top: 2px;
+  text-align: left;
+  padding: 10px;
+}
+.countries div span:nth-child(3) {
+  color: #777;
+
+  margin: -13px 0;
+  display: block;
+  text-align: left;
+  padding: 10px;
+}
+.countries p {
+  color: black;
+  padding: 10px;
+  line-height: 1.6;
+}
+.countries button {
+  border: none;
+  background-color: transparent;
+  margin-left: -123px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.countries button.stop{
+  pointer-events: none;
+}
+.countries button:hover {
+  color: black;
+  background-color: #aaa;
+}
+.mark:hover {
+  background-color: #aaa;
+  color: black;
+}
+.pay:hover {
+  background-color: #aaa;
+  color: black;
+}
+.close:hover {
+  background-color: #aaa;
+  color: black;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact .note {
+  text-align: center;
+  color: #777777b5;
+  font-style: italic;
+}
+.contact .info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+.contact .info .n,
+.contact .info .m {
+  width: 200px;
+  height: 36px;
+  padding: 10px;
+}
+.contact .info .me {
+  display: block;
+  margin: 20px 0;
+  width: 400px;
+  height: 36px;
+  padding: 10px;
+}
+.contact .info .sub {
+  color: white;
+  background-color: black;
+  width: fit-content;
+  padding: 20px;
+  text-transform: uppercase;
+  margin-left: 350px;
+  cursor: pointer;
+  height: 20px;
+  line-height: 5px;
+}
+.contact .info .sub:hover {
+  background-color: #aaa;
+} 
+
+@media (max-width: 767px) {
+  .cred {
+    margin: auto;
+  }
+  .form {
+    margin: auto;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .n {
+    display: block;
+    flex-basis: 700px;
+  }
+  .m {
+    display: block;
+    flex-basis: 700px;
+  }
+  .me {
+    flex-basis: 700px;
+  }
+  .sub {
+    position: relative;
+    left: 300px;
+  }
+}
+.map {
+  background-image: url(../images/map.jpg);
+  background-size: cover;
+  height: 500px;
+  width: 100vw;
+  margin: 100px 0;
+}
+@media (max-width: 767px) {
+  .map {
+    width: 1000px;
+  }
+}
+.footer {
+  text-align: center;
+  color: grey;
+  width: 800px;
+  position:relative;
+  top: -60px;
+  
+}
+.footer i {
+  cursor: pointer;
+}
+.footer i:hover{
+  color: #aaa;
+}
+.footer a{
+  color: #aaa;
+}
+
+@keyframes change-landing {
+  33% {
+    background-image: url("../images/la.jpg");
+  }
+  66% {
+    background-image: url("../images/ny.jpg");
+  }
+  100% {
+    background-image: url("../images/chicago.jpg");
+  }
+}
